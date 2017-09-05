@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1681556D1F576FBD00CF9980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681556C1F576FBD00CF9980 /* AppDelegate.swift */; };
-		1681556F1F576FBD00CF9980 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681556E1F576FBD00CF9980 /* ViewController.swift */; };
+		160172281F57AD9200A86764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160172251F57AD9200A86764 /* AppDelegate.swift */; };
+		1601722A1F57AD9200A86764 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160172271F57AD9200A86764 /* SettingsViewController.swift */; };
+		1601722E1F57AE0900A86764 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1601722D1F57AE0900A86764 /* Settings.storyboard */; };
+		16634A851F5A28D100AC9A46 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16634A841F5A28D100AC9A46 /* main.swift */; };
 		168155711F576FBD00CF9980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168155701F576FBD00CF9980 /* Assets.xcassets */; };
-		168155741F576FBD00CF9980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168155721F576FBD00CF9980 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160172251F57AD9200A86764 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Controller/AppDelegate.swift; sourceTree = "<group>"; };
+		160172271F57AD9200A86764 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
+		1601722D1F57AE0900A86764 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = View/Settings.storyboard; sourceTree = "<group>"; };
+		16634A841F5A28D100AC9A46 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		168155691F576FBD00CF9980 /* BackItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1681556C1F576FBD00CF9980 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1681556E1F576FBD00CF9980 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		168155701F576FBD00CF9980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		168155731F576FBD00CF9980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		168155751F576FBD00CF9980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +35,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160172231F57AD4D00A86764 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				160172251F57AD9200A86764 /* AppDelegate.swift */,
+				160172271F57AD9200A86764 /* SettingsViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		160172241F57AD5500A86764 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1601722D1F57AE0900A86764 /* Settings.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		168155601F576FBD00CF9980 = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +71,11 @@
 		1681556B1F576FBD00CF9980 /* BackItUp */ = {
 			isa = PBXGroup;
 			children = (
-				1681556C1F576FBD00CF9980 /* AppDelegate.swift */,
-				1681556E1F576FBD00CF9980 /* ViewController.swift */,
-				168155701F576FBD00CF9980 /* Assets.xcassets */,
-				168155721F576FBD00CF9980 /* Main.storyboard */,
 				168155751F576FBD00CF9980 /* Info.plist */,
+				16634A841F5A28D100AC9A46 /* main.swift */,
+				168155701F576FBD00CF9980 /* Assets.xcassets */,
+				160172231F57AD4D00A86764 /* Controller */,
+				160172241F57AD5500A86764 /* View */,
 			);
 			path = BackItUp;
 			sourceTree = "<group>";
@@ -93,6 +112,7 @@
 				TargetAttributes = {
 					168155681F576FBD00CF9980 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -121,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				168155711F576FBD00CF9980 /* Assets.xcassets in Resources */,
-				168155741F576FBD00CF9980 /* Main.storyboard in Resources */,
+				1601722E1F57AE0900A86764 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,23 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1681556F1F576FBD00CF9980 /* ViewController.swift in Sources */,
-				1681556D1F576FBD00CF9980 /* AppDelegate.swift in Sources */,
+				1601722A1F57AD9200A86764 /* SettingsViewController.swift in Sources */,
+				160172281F57AD9200A86764 /* AppDelegate.swift in Sources */,
+				16634A851F5A28D100AC9A46 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		168155721F576FBD00CF9980 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				168155731F576FBD00CF9980 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		168155761F576FBD00CF9980 /* Debug */ = {
@@ -247,11 +257,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BackItUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jacobpeterson.BackItUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -260,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BackItUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

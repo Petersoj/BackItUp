@@ -8,19 +8,19 @@
 
 import Cocoa
 
-@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
+    
+    var settingsWindowController: NSWindowController?
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        let settingsStoryBoard = NSStoryboard(name: "Settings", bundle: nil)
+        
+        settingsWindowController = settingsStoryBoard.instantiateController(withIdentifier: "SettingsWindow") as? NSWindowController
+        settingsWindowController?.showWindow(self)
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="FON-HI-Xlr">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Zi1-CU-Fc7">
+            <objects>
+                <windowController storyboardIdentifier="SettingsWindow" id="FON-HI-Xlr" sceneMemberID="viewController">
+                    <window key="window" title="BackItUp Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ifQ-Q0-zLR">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
+                        <rect key="contentRect" x="301" y="313" width="570" height="420"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <value key="minSize" type="size" width="500" height="380"/>
+                    </window>
+                    <connections>
+                        <segue destination="Fja-oE-SmG" kind="relationship" relationship="window.shadowedContentViewController" id="5MW-dM-KOa"/>
+                    </connections>
+                </windowController>
+                <customObject id="P9g-id-A7D" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-312.5" y="697"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="9i9-jM-MtL">
+            <objects>
+                <viewController id="Fja-oE-SmG" customClass="SettingsViewController" customModule="BackItUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="CHk-hR-Lq2">
+                        <rect key="frame" x="0.0" y="0.0" width="570" height="420"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="qMe-YH-Ulb">
+                                <rect key="frame" x="19" y="327" width="283" height="18"/>
+                                <buttonCell key="cell" type="radio" title="Exclude all Files listed below in the backup." bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2Eh-RR-NhD">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="glI-Fv-pal">
+                                <rect key="frame" x="19" y="361" width="280" height="18"/>
+                                <buttonCell key="cell" type="radio" title="Include all Files listed below in the backup." bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="ytg-Ej-E31">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="eGC-yd-x7C">
+                                <rect key="frame" x="18" y="18" width="163" height="18"/>
+                                <buttonCell key="cell" type="check" title="Start BackItUp on login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="rUC-rc-daj">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eGC-yd-x7C" secondAttribute="bottom" constant="20" id="Kuk-m0-Fso"/>
+                            <constraint firstItem="qMe-YH-Ulb" firstAttribute="leading" secondItem="CHk-hR-Lq2" secondAttribute="leading" constant="20" id="aiS-8a-W3C"/>
+                            <constraint firstItem="qMe-YH-Ulb" firstAttribute="top" secondItem="glI-Fv-pal" secondAttribute="bottom" constant="18" id="faY-l1-jaG"/>
+                            <constraint firstItem="glI-Fv-pal" firstAttribute="top" secondItem="CHk-hR-Lq2" secondAttribute="top" constant="42" id="iGP-A2-MJx"/>
+                            <constraint firstItem="glI-Fv-pal" firstAttribute="leading" secondItem="CHk-hR-Lq2" secondAttribute="leading" constant="20" id="jem-2J-wsc"/>
+                            <constraint firstItem="eGC-yd-x7C" firstAttribute="leading" secondItem="CHk-hR-Lq2" secondAttribute="leading" constant="20" id="mLK-s4-ksp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="RIf-jh-rwO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="1327"/>
+        </scene>
+    </scenes>
+</document>

@@ -2,19 +2,6 @@
 <diagram program="umlet" version="14.2">
   <zoom_level>10</zoom_level>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>110</x>
-      <y>150</y>
-      <w>290</w>
-      <h>260</h>
-    </coordinates>
-    <panel_attributes>BackItUp
---
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLHierarchy</id>
     <coordinates>
       <x>960</x>
@@ -25,12 +12,8 @@
     <panel_attributes>type=Package
 
 backup
+	
 controller
-	BackupController.java
-	ViewController.java
-view
-	AppFrame.java
-	ContentPane.java
 	
 BackItUp.java</panel_attributes>
     <additional_attributes/>

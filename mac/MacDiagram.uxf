@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLHierarchy</id>
+    <coordinates>
+      <x>600</x>
+      <y>180</y>
+      <w>310</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>type=Package
+
+backup
+controller
+	AppDelegate.swift
+	main.swift
+view
+	SettingsView.storyboard
+main.swift</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
