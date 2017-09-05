@@ -10,6 +10,8 @@
 		160172281F57AD9200A86764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160172251F57AD9200A86764 /* AppDelegate.swift */; };
 		1601722A1F57AD9200A86764 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160172271F57AD9200A86764 /* SettingsViewController.swift */; };
 		1601722E1F57AE0900A86764 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1601722D1F57AE0900A86764 /* Settings.storyboard */; };
+		161B47B41F5F5E6200F79E7D /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B47B31F5F5E6200F79E7D /* ProgressViewController.swift */; };
+		161B47B61F5F5F0B00F79E7D /* StatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B47B51F5F5F0B00F79E7D /* StatusBarViewController.swift */; };
 		16634A851F5A28D100AC9A46 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16634A841F5A28D100AC9A46 /* main.swift */; };
 		16759CAB1F5F136000878BEC /* StatusBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16759CAA1F5F136000878BEC /* StatusBar.storyboard */; };
 		168155711F576FBD00CF9980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168155701F576FBD00CF9980 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 		160172251F57AD9200A86764 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Controller/AppDelegate.swift; sourceTree = "<group>"; };
 		160172271F57AD9200A86764 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
 		1601722D1F57AE0900A86764 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = View/Settings.storyboard; sourceTree = "<group>"; };
+		161B47B31F5F5E6200F79E7D /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressViewController.swift; path = View/ProgressViewController.swift; sourceTree = "<group>"; };
+		161B47B51F5F5F0B00F79E7D /* StatusBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusBarViewController.swift; path = View/StatusBarViewController.swift; sourceTree = "<group>"; };
 		16634A841F5A28D100AC9A46 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		16759CAA1F5F136000878BEC /* StatusBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StatusBar.storyboard; path = View/StatusBar.storyboard; sourceTree = "<group>"; };
 		168155691F576FBD00CF9980 /* BackItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +55,8 @@
 			children = (
 				1601722D1F57AE0900A86764 /* Settings.storyboard */,
 				16759CAA1F5F136000878BEC /* StatusBar.storyboard */,
+				161B47B31F5F5E6200F79E7D /* ProgressViewController.swift */,
+				161B47B51F5F5F0B00F79E7D /* StatusBarViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -157,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1601722A1F57AD9200A86764 /* SettingsViewController.swift in Sources */,
+				161B47B61F5F5F0B00F79E7D /* StatusBarViewController.swift in Sources */,
+				161B47B41F5F5E6200F79E7D /* ProgressViewController.swift in Sources */,
 				160172281F57AD9200A86764 /* AppDelegate.swift in Sources */,
 				16634A851F5A28D100AC9A46 /* main.swift in Sources */,
 			);

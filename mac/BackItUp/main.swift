@@ -9,7 +9,6 @@
 import Cocoa
 
 let app = NSApplication.shared()
-app.setActivationPolicy(.accessory) // No dock Icon.
 let delegate = AppDelegate() //alloc main app's delegate class
 app.delegate =  delegate //set as app's delegate
 app.run()
