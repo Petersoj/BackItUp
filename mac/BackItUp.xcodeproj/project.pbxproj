@@ -11,6 +11,7 @@
 		1601722A1F57AD9200A86764 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160172271F57AD9200A86764 /* SettingsViewController.swift */; };
 		1601722E1F57AE0900A86764 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1601722D1F57AE0900A86764 /* Settings.storyboard */; };
 		16634A851F5A28D100AC9A46 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16634A841F5A28D100AC9A46 /* main.swift */; };
+		16759CAB1F5F136000878BEC /* StatusBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16759CAA1F5F136000878BEC /* StatusBar.storyboard */; };
 		168155711F576FBD00CF9980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168155701F576FBD00CF9980 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +20,7 @@
 		160172271F57AD9200A86764 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
 		1601722D1F57AE0900A86764 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = View/Settings.storyboard; sourceTree = "<group>"; };
 		16634A841F5A28D100AC9A46 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		16759CAA1F5F136000878BEC /* StatusBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StatusBar.storyboard; path = View/StatusBar.storyboard; sourceTree = "<group>"; };
 		168155691F576FBD00CF9980 /* BackItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		168155701F576FBD00CF9980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		168155751F576FBD00CF9980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				1601722D1F57AE0900A86764 /* Settings.storyboard */,
+				16759CAA1F5F136000878BEC /* StatusBar.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				168155711F576FBD00CF9980 /* Assets.xcassets in Resources */,
 				1601722E1F57AE0900A86764 /* Settings.storyboard in Resources */,
+				16759CAB1F5F136000878BEC /* StatusBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

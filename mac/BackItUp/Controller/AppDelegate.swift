@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let settingsStoryBoard = NSStoryboard(name: "Settings", bundle: nil)
         
-        settingsWindowController = settingsStoryBoard.instantiateController(withIdentifier: "SettingsWindow") as? NSWindowController
+        settingsWindowController = settingsStoryBoard.instantiateInitialController() as? NSWindowController
         settingsWindowController?.showWindow(self)
     }
     
