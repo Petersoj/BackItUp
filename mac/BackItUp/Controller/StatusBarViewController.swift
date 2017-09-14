@@ -9,5 +9,7 @@
 import Cocoa
 
 class StatusBarViewController: NSViewController {
-    
+
+    override func viewDidLoad() {
+    }
 }

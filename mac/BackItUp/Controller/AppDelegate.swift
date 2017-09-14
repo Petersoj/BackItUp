@@ -16,7 +16,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let settingsStoryBoard = NSStoryboard(name: "Settings", bundle: nil)
         
         settingsWindowController = settingsStoryBoard.instantiateInitialController() as? NSWindowController
-        settingsWindowController?.showWindow(self)
+        settingsWindowController?.window?.standardWindowButton(.miniaturizeButton)?.isEnabled = false
+        settingsWindowController?.window?.standardWindowButton(.zoomButton)?.isEnabled = false
+        settingsWindowController?.window?.makeKeyAndOrderFront(self)
+    }
+    
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        settingsWindowController?.window?.makeKeyAndOrderFront(self)
+        return true
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {

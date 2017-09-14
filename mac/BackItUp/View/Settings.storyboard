@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Window Controller-->
@@ -34,15 +36,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="qMe-YH-Ulb">
-                                <rect key="frame" x="19" y="351" width="283" height="18"/>
+                                <rect key="frame" x="19" y="308" width="283" height="18"/>
                                 <buttonCell key="cell" type="radio" title="Exclude all Files listed below in the backup." bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2Eh-RR-NhD">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="glI-Fv-pal">
-                                <rect key="frame" x="19" y="385" width="280" height="18"/>
-                                <buttonCell key="cell" type="radio" title="Include all Files listed below in the backup." bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="ytg-Ej-E31">
+                                <rect key="frame" x="19" y="342" width="280" height="18"/>
+                                <buttonCell key="cell" type="radio" title="Include all Files listed below in the backup." bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ytg-Ej-E31">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -55,54 +57,56 @@
                                 </buttonCell>
                             </button>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdm-Pz-34e">
-                                <rect key="frame" x="20" y="79" width="530" height="253"/>
-                                <clipView key="contentView" copiesOnScroll="NO" id="GCZ-8m-ciK">
-                                    <rect key="frame" x="1" y="1" width="528" height="251"/>
+                                <rect key="frame" x="20" y="80" width="530" height="209"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="GCZ-8m-ciK">
+                                    <rect key="frame" x="1" y="1" width="528" height="207"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="SV5-wE-qUI">
-                                            <rect key="frame" x="0.0" y="0.0" width="528" height="251"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="SV5-wE-qUI">
+                                            <rect key="frame" x="0.0" y="0.0" width="528" height="207"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="525" minWidth="40" maxWidth="1000" id="9sd-es-KNz">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                <tableColumn identifier="" width="525" minWidth="10" maxWidth="3.4028234663852886e+38" id="iLG-jV-7C6">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
-                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="nw8-8t-kpv">
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="Z6R-kj-snG">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="Ysn-47-Sxb">
+                                                        <tableCellView identifier="cell" id="IBT-pD-cbM">
                                                             <rect key="frame" x="1" y="1" width="525" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4E-LL-dXR">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="525" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="ZnY-dr-Ebu">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
+                                                                <pathControl focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j69-UL-44a" customClass="PathControlDelegate" customModule="BackItUp" customModuleProvider="target">
+                                                                    <rect key="frame" x="6" y="-2" width="519" height="21"/>
+                                                                    <pathCell key="cell" controlSize="small" selectable="YES" focusRingType="none" alignment="left" placeholderString="" id="Z8h-0P-2gY">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <url key="url" string="file:///Applications/"/>
+                                                                        <color key="backgroundColor" red="0.8980392157" green="0.92549019610000005" blue="0.97254901959999995" alpha="0.0" colorSpace="deviceRGB"/>
+                                                                    </pathCell>
+                                                                </pathControl>
                                                             </subviews>
-                                                            <connections>
-                                                                <outlet property="textField" destination="c4E-LL-dXR" id="Tm6-Qq-ckZ"/>
-                                                            </connections>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="j69-UL-44a" secondAttribute="trailing" id="57Z-8G-et3"/>
+                                                                <constraint firstItem="j69-UL-44a" firstAttribute="centerY" secondItem="IBT-pD-cbM" secondAttribute="centerY" id="U7u-Zk-EIH"/>
+                                                                <constraint firstItem="j69-UL-44a" firstAttribute="leading" secondItem="IBT-pD-cbM" secondAttribute="leading" constant="6" id="qjb-LS-xip"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
                                         </tableView>
                                     </subviews>
+                                    <nil key="backgroundColor"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="7Xt-hb-8hL">
                                     <rect key="frame" x="1" y="117" width="235" height="15"/>
@@ -114,7 +118,7 @@
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-59-cqd">
-                                <rect key="frame" x="20" y="48" width="22" height="24"/>
+                                <rect key="frame" x="20" y="49" width="22" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="KYI-LU-jkh"/>
                                     <constraint firstAttribute="height" constant="22" id="fXo-le-jQA"/>
@@ -125,7 +129,7 @@
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xpF-M8-UMU">
-                                <rect key="frame" x="41" y="48" width="22" height="24"/>
+                                <rect key="frame" x="41" y="49" width="22" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="89g-T0-x9t"/>
                                     <constraint firstAttribute="height" constant="22" id="BSQ-O2-YmC"/>
@@ -133,6 +137,9 @@
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DZ5-cg-zhN">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+CA
+</string>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FxX-Os-XuY">
@@ -142,59 +149,239 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="uNQ-fc-rm6" kind="sheet" id="JPn-JA-Kir"/>
+                                    <segue destination="uNQ-fc-rm6" kind="sheet" id="gzd-Fx-o9M"/>
                                 </connections>
                             </button>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C8k-1s-nNe">
+                                <rect key="frame" x="14" y="372" width="145" height="32"/>
+                                <buttonCell key="cell" type="push" title="Backup Location:" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gzt-tN-LxI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <pathControl focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-gI-vUg">
+                                <rect key="frame" x="161" y="378" width="389" height="22"/>
+                                <pathCell key="cell" selectable="YES" focusRingType="none" alignment="left" id="aBg-U2-pkC">
+                                    <font key="font" metaFont="system"/>
+                                    <url key="url" string="file:///"/>
+                                    <color key="backgroundColor" red="0.8980392157" green="0.92549019610000005" blue="0.97254901959999995" alpha="0.0" colorSpace="deviceRGB"/>
+                                </pathCell>
+                            </pathControl>
                         </subviews>
                         <constraints>
                             <constraint firstItem="jdm-Pz-34e" firstAttribute="top" secondItem="qMe-YH-Ulb" secondAttribute="bottom" constant="20" id="6fR-Xe-DQB"/>
+                            <constraint firstItem="rLM-gI-vUg" firstAttribute="top" secondItem="C8k-1s-nNe" secondAttribute="top" id="9HQ-zv-qdN"/>
                             <constraint firstAttribute="trailing" secondItem="jdm-Pz-34e" secondAttribute="trailing" constant="20" id="CM1-Hm-cXR"/>
                             <constraint firstItem="7DO-59-cqd" firstAttribute="leading" secondItem="jdm-Pz-34e" secondAttribute="leading" id="I74-Kl-Z58"/>
                             <constraint firstAttribute="trailing" secondItem="FxX-Os-XuY" secondAttribute="trailing" constant="20" id="IOI-Ve-RPs"/>
                             <constraint firstAttribute="bottom" secondItem="eGC-yd-x7C" secondAttribute="bottom" constant="20" id="Kuk-m0-Fso"/>
                             <constraint firstItem="xpF-M8-UMU" firstAttribute="top" secondItem="7DO-59-cqd" secondAttribute="top" id="LZN-Oa-7Xd"/>
+                            <constraint firstAttribute="bottom" secondItem="jdm-Pz-34e" secondAttribute="bottom" constant="80" id="Nf0-uR-iQw"/>
+                            <constraint firstItem="glI-Fv-pal" firstAttribute="top" secondItem="C8k-1s-nNe" secondAttribute="bottom" constant="20" id="Nom-4T-jzW"/>
                             <constraint firstAttribute="bottom" secondItem="FxX-Os-XuY" secondAttribute="bottom" constant="16" id="Pve-pd-Knt"/>
                             <constraint firstItem="7DO-59-cqd" firstAttribute="top" secondItem="jdm-Pz-34e" secondAttribute="bottom" constant="8" id="Rrj-nq-4eY"/>
-                            <constraint firstAttribute="bottom" secondItem="jdm-Pz-34e" secondAttribute="bottom" constant="79" id="Whv-6o-qqz"/>
+                            <constraint firstItem="rLM-gI-vUg" firstAttribute="leading" secondItem="C8k-1s-nNe" secondAttribute="trailing" constant="8" id="VX3-iG-dH9"/>
                             <constraint firstItem="qMe-YH-Ulb" firstAttribute="leading" secondItem="CHk-hR-Lq2" secondAttribute="leading" constant="20" id="aiS-8a-W3C"/>
+                            <constraint firstItem="C8k-1s-nNe" firstAttribute="top" secondItem="CHk-hR-Lq2" secondAttribute="top" constant="20" id="cXt-fE-Lz9"/>
                             <constraint firstItem="jdm-Pz-34e" firstAttribute="leading" secondItem="qMe-YH-Ulb" secondAttribute="leading" id="eUP-hT-muh"/>
                             <constraint firstItem="qMe-YH-Ulb" firstAttribute="top" secondItem="glI-Fv-pal" secondAttribute="bottom" constant="18" id="faY-l1-jaG"/>
+                            <constraint firstAttribute="trailing" secondItem="rLM-gI-vUg" secondAttribute="trailing" constant="20" id="hDp-F9-h7X"/>
                             <constraint firstItem="xpF-M8-UMU" firstAttribute="leading" secondItem="7DO-59-cqd" secondAttribute="trailing" constant="-1" id="hug-7u-ZeT"/>
-                            <constraint firstItem="glI-Fv-pal" firstAttribute="top" secondItem="CHk-hR-Lq2" secondAttribute="top" constant="18" id="iGP-A2-MJx"/>
                             <constraint firstItem="glI-Fv-pal" firstAttribute="leading" secondItem="CHk-hR-Lq2" secondAttribute="leading" constant="20" id="jem-2J-wsc"/>
                             <constraint firstItem="eGC-yd-x7C" firstAttribute="leading" secondItem="CHk-hR-Lq2" secondAttribute="leading" constant="20" id="mLK-s4-ksp"/>
+                            <constraint firstItem="C8k-1s-nNe" firstAttribute="leading" secondItem="CHk-hR-Lq2" secondAttribute="leading" constant="20" id="yK1-RL-iIw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addFileButton" destination="7DO-59-cqd" id="Ats-Gn-rbl"/>
+                        <outlet property="backupLocation" destination="rLM-gI-vUg" id="W8p-nZ-rVb"/>
+                        <outlet property="backupLocationButton" destination="C8k-1s-nNe" id="pyf-WG-Kda"/>
+                        <outlet property="excludeRadioButton" destination="qMe-YH-Ulb" id="pJA-Pu-QXq"/>
+                        <outlet property="fileListTableView" destination="SV5-wE-qUI" id="Ci0-Z6-Jq7"/>
+                        <outlet property="includeRadioButton" destination="glI-Fv-pal" id="xnN-qO-66U"/>
+                        <outlet property="removeFileButton" destination="xpF-M8-UMU" id="SnP-X0-eVz"/>
+                    </connections>
                 </viewController>
                 <customObject id="RIf-jh-rwO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="1327"/>
+            <point key="canvasLocation" x="-313" y="1315"/>
         </scene>
-        <!--View Controller-->
+        <!--Options View Controller-->
         <scene sceneID="Drg-Fu-0Zm">
             <objects>
                 <customObject id="GUK-gb-Gj3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController id="uNQ-fc-rm6" sceneMemberID="viewController">
+                <viewController id="uNQ-fc-rm6" customClass="OptionsViewController" customModule="BackItUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="rqL-6k-dx4">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="385"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oP-8i-pvx">
-                                <rect key="frame" x="185" y="132" width="81" height="32"/>
+                            <box fixedFrame="YES" title="Backup Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="XK2-Qf-Wo4">
+                                <rect key="frame" x="17" y="197" width="411" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zn6-fq-ARd">
+                                <view key="contentView" id="f5N-G6-KWC">
+                                    <rect key="frame" x="2" y="2" width="407" height="151"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-ih-mA5">
+                                            <rect key="frame" x="19" y="84" width="176" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Schedule a Backup Time." bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="55K-lX-pNa">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAg-Cf-K5U">
+                                            <rect key="frame" x="37" y="57" width="86" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Backup every" id="niT-Xh-D4D">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-3S-L7W">
+                                            <rect key="frame" x="127" y="52" width="95" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <popUpButtonCell key="cell" type="push" title="day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="UvJ-xc-kH9" id="hMI-OZ-M96">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="Dq6-10-e93">
+                                                    <items>
+                                                        <menuItem title="day" state="on" id="UvJ-xc-kH9">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                        <menuItem title="other day" id="3Pd-BS-hAi">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                        <menuItem title="3 days" id="C1n-bI-2IS">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                        <menuItem title="4 days" id="HMX-wM-YEM">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                        <menuItem title="5 days" id="C9d-xt-NCe">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                        <menuItem title="6 days" id="8eb-a4-tJ1">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                        <menuItem title="week" id="Gq5-4X-iZs">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izb-sO-YHA">
+                                            <rect key="frame" x="39" y="21" width="350" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="Axz-NG-wBi">
+                                                <font key="font" metaFont="systemThin" size="10"/>
+                                                <string key="title">If you are logged off at the time of the schedule or your backup drive is not plugged in, BackItUp will attempt to backup the next time you login.</string>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-7A-Era">
+                                            <rect key="frame" x="19" y="114" width="313" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Don't Schedule a Backup time. (Manual Backup)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="L9n-Pn-5Ek">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23w-PF-4fU">
+                                            <rect key="frame" x="225" y="57" width="16" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="at" id="fTf-5z-ff7">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSC-Kp-xjZ">
+                                            <rect key="frame" x="247" y="54" width="81" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="GBG-dX-4zv">
+                                                <font key="font" metaFont="system"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                                                    <!--1982-02-12 16:00:00 +0000-->
+                                                </date>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
+                                            </datePickerCell>
+                                        </datePicker>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" title="Backup File Options" translatesAutoresizingMaskIntoConstraints="NO" id="MWF-CD-Nd0">
+                                <rect key="frame" x="17" y="57" width="416" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="eMe-LV-77l">
+                                    <rect key="frame" x="2" y="2" width="412" height="119"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Oe-Xd-K8r">
+                                            <rect key="frame" x="19" y="82" width="352" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Create a completely new backup." bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="O7v-o9-X25">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6q0-MW-0Cy">
+                                            <rect key="frame" x="19" y="53" width="187" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Only backup changed files." bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="T8q-dx-frX">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFE-jp-P9U">
+                                            <rect key="frame" x="19" y="24" width="284" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Backup changes and keep versions of files." bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="7UT-kx-jOd">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oP-8i-pvx">
+                                <rect key="frame" x="361" y="13" width="70" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zn6-fq-ARd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="dismissController:" target="uNQ-fc-rm6" id="nTE-HC-GCW"/>
+                                    <action selector="dismissController:" target="uNQ-fc-rm6" id="tjd-j2-sJW"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVM-MJ-FhF">
+                                <rect key="frame" x="279" y="13" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IgP-45-LcR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="uNQ-fc-rm6" id="HfX-nR-Clg"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-313" y="1831"/>
+            <point key="canvasLocation" x="-313" y="1874.5"/>
         </scene>
     </scenes>
     <resources>
