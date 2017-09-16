@@ -20,7 +20,6 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var addFileButton: NSButton!
     @IBOutlet weak var removeFileButton: NSButton!
     
-    
     let fileListHandler = FileListHandler()
     
     override func viewDidLoad() {
@@ -54,13 +53,20 @@ class SettingsViewController: NSViewController {
         dialog.showsHiddenFiles        = false;
         dialog.canChooseDirectories    = true;
         dialog.canCreateDirectories    = true;
-        dialog.allowsMultipleSelection = false;
+        dialog.allowsMultipleSelection = true;
         dialog.allowedFileTypes        = ["txt"];
         dialog.beginSheetModal(for: NSApp.mainWindow!, completionHandler: { (response: Int) -> Void in
             if response == NSModalResponseOK {
                 Swift.print("\(dialog.urls[0].absoluteString)")
             }
         })
+    }
+}
+
+class SettingsWindowController: NSWindowController {
+    
+    override func cancelOperation(_ sender: Any?) {
+        self.close()
     }
 }
 

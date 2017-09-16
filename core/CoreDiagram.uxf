@@ -4,18 +4,137 @@
   <element>
     <id>UMLHierarchy</id>
     <coordinates>
-      <x>960</x>
-      <y>190</y>
+      <x>1500</x>
+      <y>310</y>
       <w>310</w>
       <h>480</h>
     </coordinates>
     <panel_attributes>type=Package
 
 backup
-	
+	Backup.java
+	BackupStreamProtocol.java
+file
+	FileIndexes.java
+	FileModificationIndexer.java
+setting
+	Settings.java
+	SettingsStreamProtocol.java
 controller
-	
-BackItUp.java</panel_attributes>
+	BackupController.java
+	SettingsController.java
+BackItUp.java
+
+bg=#2efc71</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>50</y>
+      <w>300</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>BackItUp.java
+-
++ main() {
+  Init BackupController if "--backup"
+  Init OptionsController if "--settings"
+}
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>440</y>
+      <w>310</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>Backup.java
+-
+- averageTransferRate: int
+- transferRatePolls: int
+-
++ backup() {
+  
+}
+
++ calculateTimeRemaining() {
+
+}
+
+bg=#3498ff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>200</y>
+      <w>310</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>BackupController.java
+-
+- backup: Backup
+-
++ init() {
+  init backup.
+}
++ start() {
+  Start the backup.
+}
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>440</y>
+      <w>310</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>BackupStreamProtocol.java : Thread
+-
+- input: BufferedReader
+-
++ init() {
+  init input with System.in
+}
+
++ run() {
+  Simply read line from input
+}
+
+bg=#3498ff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>200</y>
+      <w>310</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>SettingsController.java
+-
+- options: Options
+-
++ init() {
+  init options.
+}
++ start() {
+  Start options.
+}
+
+bg=red</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

@@ -11,6 +11,12 @@ import Cocoa
 class OptionsViewController: NSViewController {
     
     override func viewDidLoad() {
+        // Prevents resizing.
+        self.preferredContentSize = self.view.frame.size
     }
     
+    // Used for the preferredContentSize to prevent resizing.
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+    }
 }
